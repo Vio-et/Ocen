@@ -1,0 +1,5 @@
+Server: 请输入您的用户名
+User: Server: 欢迎您，Orlando!感谢您咨询Ocen在线客服，请问能为您提供什么服务呢？
+User: Server: Ocen商店的商品有以下这些电脑 手机 平板 耳机请问您想查看哪件商品呢？
+User: Server: Ocen手机的信息如下：价格 4000 分辨率 2K 内存 256GB
+Server: 谢谢您对Ocen的支持，期待与您的再次相遇，再见! 
