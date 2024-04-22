@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ocen: Robot/lex/Lexical.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Ocen
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_63b3edbb6dcb5a7e8e866ca08f7102c4.html">Robot</a></li><li class="navelem"><a class="el" href="dir_1f79d73c10e3f4390f1468f8c26a5e1f.html">lex</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Lexical.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_lexical_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// 记号类型枚举类型</span></div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="_lexical_8h.html#ad870f3a2c3baacb65e34071ae73c66cb">    9</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="_lexical_8h.html#ad870f3a2c3baacb65e34071ae73c66cb">Sign</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="_lexical_8h.html#ad870f3a2c3baacb65e34071ae73c66cba129281444e94f5f509cba213d51a814d">   10</a></span>    <a class="code hl_enumvalue" href="_lexical_8h.html#ad870f3a2c3baacb65e34071ae73c66cba129281444e94f5f509cba213d51a814d">KEYWORD</a>,</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="_lexical_8h.html#ad870f3a2c3baacb65e34071ae73c66cba3b53675250beaefa566e7ff804d9f5d6">   11</a></span>    <a class="code hl_enumvalue" href="_lexical_8h.html#ad870f3a2c3baacb65e34071ae73c66cba3b53675250beaefa566e7ff804d9f5d6">IDENTIFY</a>,</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="_lexical_8h.html#ad870f3a2c3baacb65e34071ae73c66cba12a90dfe20486bbe3e075afcd19ef2d0">   12</a></span>    <a class="code hl_enumvalue" href="_lexical_8h.html#ad870f3a2c3baacb65e34071ae73c66cba12a90dfe20486bbe3e075afcd19ef2d0">NUMBER</a>,</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="_lexical_8h.html#ad870f3a2c3baacb65e34071ae73c66cbaee847e634a4297b274316de8a8ca9921">   13</a></span>    <a class="code hl_enumvalue" href="_lexical_8h.html#ad870f3a2c3baacb65e34071ae73c66cbaee847e634a4297b274316de8a8ca9921">STRING</a>,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="_lexical_8h.html#ad870f3a2c3baacb65e34071ae73c66cbaedd9974ef2207e0a03e0717dcb9e2269">   14</a></span>    <a class="code hl_enumvalue" href="_lexical_8h.html#ad870f3a2c3baacb65e34071ae73c66cbaedd9974ef2207e0a03e0717dcb9e2269">IO</a>,</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="_lexical_8h.html#ad870f3a2c3baacb65e34071ae73c66cbab21bb6164a68674f388520d4d59e4da1">   15</a></span>    <a class="code hl_enumvalue" href="_lexical_8h.html#ad870f3a2c3baacb65e34071ae73c66cbab21bb6164a68674f388520d4d59e4da1">STATE</a>,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="_lexical_8h.html#ad870f3a2c3baacb65e34071ae73c66cbae4f21099481eef801603441650cb6eff">   16</a></span>    <a class="code hl_enumvalue" href="_lexical_8h.html#ad870f3a2c3baacb65e34071ae73c66cbae4f21099481eef801603441650cb6eff">PROCESS</a>,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>};</div>
+</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_token.html">   20</a></span><span class="keyword">class </span><a class="code hl_class" href="class_token.html">Token</a> {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_token.html#a8f7f65b2666aff1b8c38a7b2bd215edf">   21</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_token.html#a8f7f65b2666aff1b8c38a7b2bd215edf">mark</a>;           </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_token.html#a7bcbb026c06822694c80ec6c058dee10">   22</a></span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="class_token.html#a7bcbb026c06822694c80ec6c058dee10">attribute</a>;   </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="class_token.html">Token</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="class_token.html#a8f7f65b2666aff1b8c38a7b2bd215edf">mark</a> = -1, <span class="keywordtype">string</span> <a class="code hl_variable" href="class_token.html#a7bcbb026c06822694c80ec6c058dee10">attribute</a> = <span class="stringliteral">&quot; &quot;</span>);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_class" href="class_token.html">Token</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_token.html">Token</a>&amp; token);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_token.html#a3d7d59eaac1535df1433357d5d372f84">   26</a></span>    <a class="code hl_function" href="class_token.html#a3d7d59eaac1535df1433357d5d372f84">~Token</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_token.html#a21a80c1848874891dc811137162f473f">getMark</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_token.html#a6a1a2d15b150fd70c416f6315d816263">getAttribute</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_token.html#a1cc7449811a5e5d4d862cc3da0fd3556">setMark</a>(<span class="keywordtype">int</span> i);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_token.html#a2af733ac7924a7501650333d4cf3fd6a">setAttribute</a>(<span class="keywordtype">string</span> <a class="code hl_variable" href="class_token.html#a7bcbb026c06822694c80ec6c058dee10">attribute</a>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_token.html#ac040efc508a520dc0d19046969ddf1d9">output</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>};</div>
+</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_token_stream.html">   35</a></span><span class="keyword">class </span><a class="code hl_class" href="class_token_stream.html">TokenStream</a> {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_token_stream.html#a928729a0cbed1e04cef656a62612b0ec">   36</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_token_stream.html#a928729a0cbed1e04cef656a62612b0ec">size</a>;           </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_token_stream.html#a941ebbded0fb5d9113600a360cf81c42">   37</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_token_stream.html#a941ebbded0fb5d9113600a360cf81c42">length</a>;         </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_token_stream.html#a2579189b5811f685c8d4da872052c85a">   38</a></span>    <a class="code hl_class" href="class_token.html">Token</a>* <a class="code hl_variable" href="class_token_stream.html#a2579189b5811f685c8d4da872052c85a">tokens</a>;      </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="class_token_stream.html">TokenStream</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="class_token_stream.html#a928729a0cbed1e04cef656a62612b0ec">size</a> = 50);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_class" href="class_token_stream.html">TokenStream</a>(<a class="code hl_class" href="class_token_stream.html">TokenStream</a>&amp; tokenStream);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_function" href="class_token_stream.html#a16519782e35e74b26236c729c6b94f8c">~TokenStream</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_token_stream.html#ae691f5b1fc803b78ec994d3f1cde4fff">getLength</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_class" href="class_token.html">Token</a> <a class="code hl_function" href="class_token_stream.html#aea84b2cdba7ea4c6dd0be941518da7fd">getToken</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_token_stream.html#a3705714d52f2c1f0ea169cf7d9bcf11e">append</a>(<span class="keywordtype">int</span> mark, <span class="keywordtype">string</span> attribute);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_token_stream.html#a84c30c8c6a167ec101d18bfe967859fb">output</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>};</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><a class="code hl_class" href="class_token_stream.html">TokenStream</a>* <a class="code hl_function" href="_lexical_8h.html#a76996d78776dec8a6f818e384b4589cc">lexical</a>(<span class="keywordtype">string</span> rslPath);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_lexical_8h.html#a18409178c214ea8c056b129a75b36b9b">isAlpha</a>(<span class="keywordtype">string</span> uncheck);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_lexical_8h.html#a6b300f5159ec9b52955a66836866469d">isNumber</a>(<span class="keywordtype">string</span> uncheck);</div>
+<div class="ttc" id="a_lexical_8h_html_a18409178c214ea8c056b129a75b36b9b"><div class="ttname"><a href="_lexical_8h.html#a18409178c214ea8c056b129a75b36b9b">isAlpha</a></div><div class="ttdeci">bool isAlpha(string uncheck)</div><div class="ttdoc">检查字符串是否全部由字母组成</div><div class="ttdef"><b>Definition</b> Lexical.cpp:231</div></div>
+<div class="ttc" id="a_lexical_8h_html_a6b300f5159ec9b52955a66836866469d"><div class="ttname"><a href="_lexical_8h.html#a6b300f5159ec9b52955a66836866469d">isNumber</a></div><div class="ttdeci">bool isNumber(string uncheck)</div><div class="ttdoc">检查字符串是否全部由数字组成</div><div class="ttdef"><b>Definition</b> Lexical.cpp:248</div></div>
+<div class="ttc" id="a_lexical_8h_html_a76996d78776dec8a6f818e384b4589cc"><div class="ttname"><a href="_lexical_8h.html#a76996d78776dec8a6f818e384b4589cc">lexical</a></div><div class="ttdeci">TokenStream * lexical(string rslPath)</div><div class="ttdoc">词法分析函数，处理脚本并转化为记号流 @rslPath 保存机器人语言脚本路径的字符串</div><div class="ttdef"><b>Definition</b> Lexical.cpp:3</div></div>
+<div class="ttc" id="a_lexical_8h_html_ad870f3a2c3baacb65e34071ae73c66cb"><div class="ttname"><a href="_lexical_8h.html#ad870f3a2c3baacb65e34071ae73c66cb">Sign</a></div><div class="ttdeci">Sign</div><div class="ttdef"><b>Definition</b> Lexical.h:9</div></div>
+<div class="ttc" id="a_lexical_8h_html_ad870f3a2c3baacb65e34071ae73c66cba129281444e94f5f509cba213d51a814d"><div class="ttname"><a href="_lexical_8h.html#ad870f3a2c3baacb65e34071ae73c66cba129281444e94f5f509cba213d51a814d">KEYWORD</a></div><div class="ttdeci">@ KEYWORD</div><div class="ttdef"><b>Definition</b> Lexical.h:10</div></div>
+<div class="ttc" id="a_lexical_8h_html_ad870f3a2c3baacb65e34071ae73c66cba12a90dfe20486bbe3e075afcd19ef2d0"><div class="ttname"><a href="_lexical_8h.html#ad870f3a2c3baacb65e34071ae73c66cba12a90dfe20486bbe3e075afcd19ef2d0">NUMBER</a></div><div class="ttdeci">@ NUMBER</div><div class="ttdef"><b>Definition</b> Lexical.h:12</div></div>
+<div class="ttc" id="a_lexical_8h_html_ad870f3a2c3baacb65e34071ae73c66cba3b53675250beaefa566e7ff804d9f5d6"><div class="ttname"><a href="_lexical_8h.html#ad870f3a2c3baacb65e34071ae73c66cba3b53675250beaefa566e7ff804d9f5d6">IDENTIFY</a></div><div class="ttdeci">@ IDENTIFY</div><div class="ttdef"><b>Definition</b> Lexical.h:11</div></div>
+<div class="ttc" id="a_lexical_8h_html_ad870f3a2c3baacb65e34071ae73c66cbab21bb6164a68674f388520d4d59e4da1"><div class="ttname"><a href="_lexical_8h.html#ad870f3a2c3baacb65e34071ae73c66cbab21bb6164a68674f388520d4d59e4da1">STATE</a></div><div class="ttdeci">@ STATE</div><div class="ttdef"><b>Definition</b> Lexical.h:15</div></div>
+<div class="ttc" id="a_lexical_8h_html_ad870f3a2c3baacb65e34071ae73c66cbae4f21099481eef801603441650cb6eff"><div class="ttname"><a href="_lexical_8h.html#ad870f3a2c3baacb65e34071ae73c66cbae4f21099481eef801603441650cb6eff">PROCESS</a></div><div class="ttdeci">@ PROCESS</div><div class="ttdef"><b>Definition</b> Lexical.h:16</div></div>
+<div class="ttc" id="a_lexical_8h_html_ad870f3a2c3baacb65e34071ae73c66cbaedd9974ef2207e0a03e0717dcb9e2269"><div class="ttname"><a href="_lexical_8h.html#ad870f3a2c3baacb65e34071ae73c66cbaedd9974ef2207e0a03e0717dcb9e2269">IO</a></div><div class="ttdeci">@ IO</div><div class="ttdef"><b>Definition</b> Lexical.h:14</div></div>
+<div class="ttc" id="a_lexical_8h_html_ad870f3a2c3baacb65e34071ae73c66cbaee847e634a4297b274316de8a8ca9921"><div class="ttname"><a href="_lexical_8h.html#ad870f3a2c3baacb65e34071ae73c66cbaee847e634a4297b274316de8a8ca9921">STRING</a></div><div class="ttdeci">@ STRING</div><div class="ttdef"><b>Definition</b> Lexical.h:13</div></div>
+<div class="ttc" id="aclass_token_html"><div class="ttname"><a href="class_token.html">Token</a></div><div class="ttdoc">抽象记号的类Token</div><div class="ttdef"><b>Definition</b> Lexical.h:20</div></div>
+<div class="ttc" id="aclass_token_html_a1cc7449811a5e5d4d862cc3da0fd3556"><div class="ttname"><a href="class_token.html#a1cc7449811a5e5d4d862cc3da0fd3556">Token::setMark</a></div><div class="ttdeci">void setMark(int i)</div><div class="ttdoc">设置记号的类型</div><div class="ttdef"><b>Definition</b> Lexical.cpp:98</div></div>
+<div class="ttc" id="aclass_token_html_a21a80c1848874891dc811137162f473f"><div class="ttname"><a href="class_token.html#a21a80c1848874891dc811137162f473f">Token::getMark</a></div><div class="ttdeci">int getMark() const</div><div class="ttdoc">获取记号的类型</div><div class="ttdef"><b>Definition</b> Lexical.cpp:116</div></div>
+<div class="ttc" id="aclass_token_html_a2af733ac7924a7501650333d4cf3fd6a"><div class="ttname"><a href="class_token.html#a2af733ac7924a7501650333d4cf3fd6a">Token::setAttribute</a></div><div class="ttdeci">void setAttribute(string attribute)</div><div class="ttdoc">设置记号的属性</div><div class="ttdef"><b>Definition</b> Lexical.cpp:107</div></div>
+<div class="ttc" id="aclass_token_html_a3d7d59eaac1535df1433357d5d372f84"><div class="ttname"><a href="class_token.html#a3d7d59eaac1535df1433357d5d372f84">Token::~Token</a></div><div class="ttdeci">~Token()</div><div class="ttdoc">记号Token类的默认析构函数</div></div>
+<div class="ttc" id="aclass_token_html_a6a1a2d15b150fd70c416f6315d816263"><div class="ttname"><a href="class_token.html#a6a1a2d15b150fd70c416f6315d816263">Token::getAttribute</a></div><div class="ttdeci">string getAttribute()</div><div class="ttdoc">获取记号的属性</div><div class="ttdef"><b>Definition</b> Lexical.cpp:125</div></div>
+<div class="ttc" id="aclass_token_html_a7bcbb026c06822694c80ec6c058dee10"><div class="ttname"><a href="class_token.html#a7bcbb026c06822694c80ec6c058dee10">Token::attribute</a></div><div class="ttdeci">string attribute</div><div class="ttdoc">记号的类型</div><div class="ttdef"><b>Definition</b> Lexical.h:22</div></div>
+<div class="ttc" id="aclass_token_html_a8f7f65b2666aff1b8c38a7b2bd215edf"><div class="ttname"><a href="class_token.html#a8f7f65b2666aff1b8c38a7b2bd215edf">Token::mark</a></div><div class="ttdeci">int mark</div><div class="ttdef"><b>Definition</b> Lexical.h:21</div></div>
+<div class="ttc" id="aclass_token_html_ac040efc508a520dc0d19046969ddf1d9"><div class="ttname"><a href="class_token.html#ac040efc508a520dc0d19046969ddf1d9">Token::output</a></div><div class="ttdeci">void output()</div><div class="ttdoc">格式化输出记号的信息</div><div class="ttdef"><b>Definition</b> Lexical.cpp:133</div></div>
+<div class="ttc" id="aclass_token_stream_html"><div class="ttname"><a href="class_token_stream.html">TokenStream</a></div><div class="ttdoc">抽象记号流的类TokenStream</div><div class="ttdef"><b>Definition</b> Lexical.h:35</div></div>
+<div class="ttc" id="aclass_token_stream_html_a16519782e35e74b26236c729c6b94f8c"><div class="ttname"><a href="class_token_stream.html#a16519782e35e74b26236c729c6b94f8c">TokenStream::~TokenStream</a></div><div class="ttdeci">~TokenStream()</div><div class="ttdoc">记号流TokenStream的析构函数</div><div class="ttdef"><b>Definition</b> Lexical.cpp:166</div></div>
+<div class="ttc" id="aclass_token_stream_html_a2579189b5811f685c8d4da872052c85a"><div class="ttname"><a href="class_token_stream.html#a2579189b5811f685c8d4da872052c85a">TokenStream::tokens</a></div><div class="ttdeci">Token * tokens</div><div class="ttdoc">记号流的有效长度</div><div class="ttdef"><b>Definition</b> Lexical.h:38</div></div>
+<div class="ttc" id="aclass_token_stream_html_a3705714d52f2c1f0ea169cf7d9bcf11e"><div class="ttname"><a href="class_token_stream.html#a3705714d52f2c1f0ea169cf7d9bcf11e">TokenStream::append</a></div><div class="ttdeci">void append(int mark, string attribute)</div><div class="ttdoc">向记号流中增加记号</div><div class="ttdef"><b>Definition</b> Lexical.cpp:195</div></div>
+<div class="ttc" id="aclass_token_stream_html_a84c30c8c6a167ec101d18bfe967859fb"><div class="ttname"><a href="class_token_stream.html#a84c30c8c6a167ec101d18bfe967859fb">TokenStream::output</a></div><div class="ttdeci">void output()</div><div class="ttdoc">格式化输出记号流</div><div class="ttdef"><b>Definition</b> Lexical.cpp:220</div></div>
+<div class="ttc" id="aclass_token_stream_html_a928729a0cbed1e04cef656a62612b0ec"><div class="ttname"><a href="class_token_stream.html#a928729a0cbed1e04cef656a62612b0ec">TokenStream::size</a></div><div class="ttdeci">int size</div><div class="ttdef"><b>Definition</b> Lexical.h:36</div></div>
+<div class="ttc" id="aclass_token_stream_html_a941ebbded0fb5d9113600a360cf81c42"><div class="ttname"><a href="class_token_stream.html#a941ebbded0fb5d9113600a360cf81c42">TokenStream::length</a></div><div class="ttdeci">int length</div><div class="ttdoc">记号流的最大空间</div><div class="ttdef"><b>Definition</b> Lexical.h:37</div></div>
+<div class="ttc" id="aclass_token_stream_html_ae691f5b1fc803b78ec994d3f1cde4fff"><div class="ttname"><a href="class_token_stream.html#ae691f5b1fc803b78ec994d3f1cde4fff">TokenStream::getLength</a></div><div class="ttdeci">int getLength() const</div><div class="ttdoc">获取记号流的长度</div><div class="ttdef"><b>Definition</b> Lexical.cpp:175</div></div>
+<div class="ttc" id="aclass_token_stream_html_aea84b2cdba7ea4c6dd0be941518da7fd"><div class="ttname"><a href="class_token_stream.html#aea84b2cdba7ea4c6dd0be941518da7fd">TokenStream::getToken</a></div><div class="ttdeci">Token getToken(int index)</div><div class="ttdoc">按索引获取记号流中的记号</div><div class="ttdef"><b>Definition</b> Lexical.cpp:185</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

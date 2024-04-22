@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ocen: Robot/interpreter/Interpreter.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Ocen
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_63b3edbb6dcb5a7e8e866ca08f7102c4.html">Robot</a></li><li class="navelem"><a class="el" href="dir_ec87e4b26b7356779abc1fe1c4c9f804.html">interpreter</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">Interpreter.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_interpreter_8h_source.html">Interpreter.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a219d5e8e8f4b7e04077ef5cb718ba270" id="r_a219d5e8e8f4b7e04077ef5cb718ba270"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_interpreter_8cpp.html#a219d5e8e8f4b7e04077ef5cb718ba270">interpreter</a> (<a class="el" href="class_parser.html">Parser</a> *<a class="el" href="_parser_8cpp.html#ac6c5da63c098c33021607f871c489ebe">parser</a>, shared_ptr&lt; tcp::socket &gt; sock)</td></tr>
+<tr class="memdesc:a219d5e8e8f4b7e04077ef5cb718ba270"><td class="mdescLeft">&#160;</td><td class="mdescRight">用语法分析树和执行环境进行解释执行函数  <br /></td></tr>
+<tr class="separator:a219d5e8e8f4b7e04077ef5cb718ba270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42d2ae41b239df96639d11bc1f757811" id="r_a42d2ae41b239df96639d11bc1f757811"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_interpreter_8cpp.html#a42d2ae41b239df96639d11bc1f757811">sendAnswer</a> (<a class="el" href="_parser_8h.html#a30229ccc46d415e9a0e1d30b400700c7">Answer</a> sentence, shared_ptr&lt; tcp::socket &gt; socket)</td></tr>
+<tr class="memdesc:a42d2ae41b239df96639d11bc1f757811"><td class="mdescLeft">&#160;</td><td class="mdescRight">通过socket向客户端发送回复  <br /></td></tr>
+<tr class="separator:a42d2ae41b239df96639d11bc1f757811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95c509171748b16525f76c90e68cf0e7" id="r_a95c509171748b16525f76c90e68cf0e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_interpreter_8cpp.html#a95c509171748b16525f76c90e68cf0e7">recvCommand</a> (shared_ptr&lt; tcp::socket &gt; sock, string &amp;command, bool &amp;isGetInput)</td></tr>
+<tr class="memdesc:a95c509171748b16525f76c90e68cf0e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">通过socket接收客户端的命令  <br /></td></tr>
+<tr class="separator:a95c509171748b16525f76c90e68cf0e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaed1ede1422977aa29967b6ebf6d6b2d" id="r_aaed1ede1422977aa29967b6ebf6d6b2d"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_interpreter_8cpp.html#aaed1ede1422977aa29967b6ebf6d6b2d">analyseCommand</a> (const string &amp;command, <a class="el" href="class_state.html">State</a> state)</td></tr>
+<tr class="memdesc:aaed1ede1422977aa29967b6ebf6d6b2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">解析客户端的命令  <br /></td></tr>
+<tr class="separator:aaed1ede1422977aa29967b6ebf6d6b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a321120aa95065ec73140b2fe4ca3fff1" id="r_a321120aa95065ec73140b2fe4ca3fff1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_interpreter_8cpp.html#a321120aa95065ec73140b2fe4ca3fff1">timerThread</a> (int timer, bool &amp;isSilence)</td></tr>
+<tr class="memdesc:a321120aa95065ec73140b2fe4ca3fff1"><td class="mdescLeft">&#160;</td><td class="mdescRight">倒计时函数  <br /></td></tr>
+<tr class="separator:a321120aa95065ec73140b2fe4ca3fff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="aaed1ede1422977aa29967b6ebf6d6b2d" name="aaed1ede1422977aa29967b6ebf6d6b2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaed1ede1422977aa29967b6ebf6d6b2d">&#9670;&#160;</a></span>analyseCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string analyseCommand </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>command</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_state.html">State</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>解析客户端的命令 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">command</td><td>待解析的客户端命令 </td></tr>
+    <tr><td class="paramname">state</td><td>解析时语法分析树的当前状态 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回客户端命令中对应的调用关系表的关键词 </dd></dl>
+
+</div>
+</div>
+<a id="a219d5e8e8f4b7e04077ef5cb718ba270" name="a219d5e8e8f4b7e04077ef5cb718ba270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a219d5e8e8f4b7e04077ef5cb718ba270">&#9670;&#160;</a></span>interpreter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void interpreter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_parser.html">Parser</a> *&#160;</td>
+          <td class="paramname"><em>parser</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">shared_ptr&lt; tcp::socket &gt;&#160;</td>
+          <td class="paramname"><em>sock</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>用语法分析树和执行环境进行解释执行函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parser</td><td>语法分析树 </td></tr>
+    <tr><td class="paramname">sock</td><td>与客户端通信的socket </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a95c509171748b16525f76c90e68cf0e7" name="a95c509171748b16525f76c90e68cf0e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95c509171748b16525f76c90e68cf0e7">&#9670;&#160;</a></span>recvCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void recvCommand </td>
+          <td>(</td>
+          <td class="paramtype">shared_ptr&lt; tcp::socket &gt;&#160;</td>
+          <td class="paramname"><em>sock</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>command</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>isGetInput</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>通过socket接收客户端的命令 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sock</td><td>与客户端通信的socket </td></tr>
+    <tr><td class="paramname">command</td><td>保存客户端命令的字符串 </td></tr>
+    <tr><td class="paramname">isReady</td><td>保存是否收到客户端命令的布尔值；若收到命令，则为ture；否则，为false； </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a42d2ae41b239df96639d11bc1f757811" name="a42d2ae41b239df96639d11bc1f757811"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42d2ae41b239df96639d11bc1f757811">&#9670;&#160;</a></span>sendAnswer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendAnswer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_parser_8h.html#a30229ccc46d415e9a0e1d30b400700c7">Answer</a>&#160;</td>
+          <td class="paramname"><em>sentence</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">shared_ptr&lt; tcp::socket &gt;&#160;</td>
+          <td class="paramname"><em>socket</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>通过socket向客户端发送回复 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sentence</td><td>待发送的回复 </td></tr>
+    <tr><td class="paramname">socket</td><td>与客户端通信的socket </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a321120aa95065ec73140b2fe4ca3fff1" name="a321120aa95065ec73140b2fe4ca3fff1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a321120aa95065ec73140b2fe4ca3fff1">&#9670;&#160;</a></span>timerThread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void timerThread </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>isSilence</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>倒计时函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer</td><td>倒计时的时间，单位为秒 </td></tr>
+    <tr><td class="paramname">isSilence</td><td>保存倒计时是否结束的布尔值；若倒计时结束，为真；否则，为假 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

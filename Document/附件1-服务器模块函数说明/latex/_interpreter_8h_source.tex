@@ -1,0 +1,28 @@
+\doxysection{Interpreter.\+h}
+\hypertarget{_interpreter_8h_source}{}\label{_interpreter_8h_source}\index{Robot/interpreter/Interpreter.h@{Robot/interpreter/Interpreter.h}}
+\mbox{\hyperlink{_interpreter_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}../parser/Parser.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}../../Server/UserData.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <boost/asio.hpp>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00011\ \textcolor{keyword}{using\ namespace\ }boost::asio;}
+\DoxyCodeLine{00012\ \textcolor{keyword}{using\ }ip::tcp;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_interpreter_8h_a219d5e8e8f4b7e04077ef5cb718ba270}{interpreter}}(\mbox{\hyperlink{class_parser}{Parser}}*\ \mbox{\hyperlink{_parser_8cpp_ac6c5da63c098c33021607f871c489ebe}{parser}},\ shared\_ptr<tcp::socket>\ sock);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_interpreter_8h_a42d2ae41b239df96639d11bc1f757811}{sendAnswer}}(\mbox{\hyperlink{_parser_8h_a30229ccc46d415e9a0e1d30b400700c7}{Answer}}\ sentence,\ shared\_ptr<tcp::socket>\ socket);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_interpreter_8h_a771fc6af6df1c74aa024ebe0e0db4715}{recvCommand}}(shared\_ptr<tcp::socket>\ sock,\ \textcolor{keywordtype}{string}\&\ command,\ \textcolor{keywordtype}{bool}\&\ isReady);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{_interpreter_8h_aaed1ede1422977aa29967b6ebf6d6b2d}{analyseCommand}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ command,\ \mbox{\hyperlink{class_state}{State}}\ state);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_interpreter_8h_a321120aa95065ec73140b2fe4ca3fff1}{timerThread}}(\textcolor{keywordtype}{int}\ timer,\ \textcolor{keywordtype}{bool}\&\ isSilence);}
+
+\end{DoxyCode}
