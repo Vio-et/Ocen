@@ -1,0 +1,90 @@
+State welcome:
+	Write << "欢迎您，" {username} "!感谢您咨询Ocen在线客服，请问能为您提供什么服务呢？"
+
+	Read >> 20
+
+	Rouse "商品" productProc
+
+	Rouse "账单" billProc
+
+	Rouse "投诉" complainProc
+
+	Silence silenceProc
+
+	Default defaultProc
+
+State productProc:
+	Write << "Ocen商店的商品有以下这些" {product} "请问您想查看哪件商品呢？"
+
+	Read >> 20
+
+	Rouse "电脑" computerProc
+
+	Rouse "手机" phoneProc
+
+	Rouse "平板" padProc
+
+	Rouse "耳机" podsProc
+
+	Silence silenceProc
+
+	Default thanks
+
+State computerProc:
+	Write << "Ocen电脑的信息如下：" {computer}
+
+	Exit
+State phoneProc:
+	Write << "Ocen手机的信息如下：" {phone}
+
+	Exit
+State padProc:
+	Write << "Ocen平板的信息如下：" {pad}
+
+	Exit
+State podsProc:
+	Write << "Ocen耳机的信息如下：" {pods}
+
+	Exit
+State billProc:
+	Write << "您目前的订单信息如下：" {order}
+
+	Exit
+State complainProc:
+	Write << "您的意见是我们改进的动力，请问您还有什么需要补充的吗？"
+
+	Read >> 20
+
+	Default thanks
+State silenceProc:
+	Write << "您未输入任何信息，将在20秒后断开连接。"
+
+	Read >> 20
+
+	Rouse "商品" productProc
+
+	Rouse "账单" billProc
+
+	Rouse "投诉" complainProc
+
+	Silence thanks
+
+	Default defaultProc
+State defaultProc:
+	Write << "十分抱歉，未能明白您的意思，请您再说详细一些。"
+
+	Read >> 20
+
+	Rouse "商品" productProc
+
+	Rouse "账单" billProc
+
+	Rouse "投诉" complainProc
+
+	Silence silenceProc
+
+	Default defaultProc
+State thanks:
+	Write << "感谢您对Ocen的支持！期待您的再次惠顾！"
+
+	Exit

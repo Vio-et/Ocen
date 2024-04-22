@@ -1,0 +1,61 @@
+State welcome:
+	Write << "欢迎您，" {username} "!感谢您咨询Ocen通信在线客服，请问能为您提供什么服务呢？"
+
+	Read >> 20
+
+	Rouse "流量" flowProc
+
+	Rouse "话费" billProc
+
+	Rouse "投诉" complainProc
+
+	Silence silenceProc
+
+	Default defaultProc
+
+State flowProc:
+	Write << "您的流量信息如下:" {flow} 
+
+	Exit
+State billProc:
+	Write << "您的话费信息如下：" {bill}
+
+	Exit
+State complainProc:
+	Write << "您的意见是我们改进的动力，请问您还有什么需要补充的吗？"
+
+	Read >> 20
+
+	Default thanks
+State silenceProc:
+	Write << "您未输入任何信息，将在20秒后断开连接。"
+
+	Read >> 20
+
+	Rouse "流量" flowProc
+
+	Rouse "话费" billProc
+
+	Rouse "投诉" complainProc
+
+	Silence thanks
+
+	Default defaultProc
+State defaultProc:
+	Write << "十分抱歉，未能明白您的意思，请您再说详细一些。"
+
+	Read >> 20
+
+	Rouse "流量" flowProc
+
+	Rouse "话费" billProc
+
+	Rouse "投诉" complainProc
+
+	Silence silenceProc
+
+	Default defaultProc
+State thanks:
+	Write << "感谢您对Ocen通信的支持！"
+
+	Exit

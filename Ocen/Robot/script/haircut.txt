@@ -1,0 +1,85 @@
+State welcome:
+	Write << "欢迎您，" {username} "!感谢您咨询Ocen理发店在线客服，请问能为您提供什么服务呢？"
+
+	Read >> 20
+
+	Rouse "发型" hairProc
+
+	Rouse "会员" vipProc
+
+	Rouse "投诉" complainProc
+
+	Silence silenceProc
+
+	Default defaultProc
+
+State hairProc:
+	Write << "Ocen理发店的发型有以下这些" {haircuts} "请问您了解哪个发型呢？"
+
+	Read >> 20
+
+	Rouse "毛寸" buzzcutProc
+
+	Rouse "烫发" permProc
+
+	Rouse "染发" dyeProc
+
+	Silence silenceProc
+
+	Default thanks
+
+State buzzcutProc:
+	Write << "毛寸发型的信息如下：" {buzzcut}
+
+	Exit
+State permProc:
+	Write << "烫发的信息如下：" {perm}
+
+	Exit
+State dyeProc:
+	Write << "染发的信息如下：" {dye}
+
+	Exit
+
+State vipProc:
+	Write << "您的会员信息如下：" {vip}
+
+	Exit
+State complainProc:
+	Write << "您的意见是我们改进的动力，请问您还有什么需要补充的吗？"
+
+	Read >> 20
+
+	Default thanks
+State silenceProc:
+	Write << "您未输入任何信息，将在20秒后断开连接。"
+
+	Read >> 20
+
+	Rouse "发型" hairProc
+
+	Rouse "会员" vipProc
+
+	Rouse "投诉" complainProc
+
+	Silence thanks
+
+	Default defaultProc
+State defaultProc:
+	Write << "十分抱歉，未能明白您的意思，请您再说详细一些。"
+	
+	Read >> 20
+
+	Rouse "发型" hairProc
+
+	Rouse "会员" vipProc
+
+	Rouse "投诉" complainProc
+
+	Silence silenceProc
+
+	Default defaultProc
+State thanks:
+	Write << "感谢您对Ocen理发店的支持！"
+
+	Exit
