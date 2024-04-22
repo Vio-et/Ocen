@@ -1,0 +1,57 @@
+\doxysection{Lexical.\+h}
+\hypertarget{_lexical_8h_source}{}\label{_lexical_8h_source}\index{Robot/lex/Lexical.h@{Robot/lex/Lexical.h}}
+\mbox{\hyperlink{_lexical_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ 记号类型枚举类型}}
+\DoxyCodeLine{00009\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_lexical_8h_ad870f3a2c3baacb65e34071ae73c66cb}{Sign}}\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{_lexical_8h_ad870f3a2c3baacb65e34071ae73c66cba129281444e94f5f509cba213d51a814d}{KEYWORD}},}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{_lexical_8h_ad870f3a2c3baacb65e34071ae73c66cba3b53675250beaefa566e7ff804d9f5d6}{IDENTIFY}},}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{_lexical_8h_ad870f3a2c3baacb65e34071ae73c66cba12a90dfe20486bbe3e075afcd19ef2d0}{NUMBER}},}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{_lexical_8h_ad870f3a2c3baacb65e34071ae73c66cbaee847e634a4297b274316de8a8ca9921}{STRING}},}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{_lexical_8h_ad870f3a2c3baacb65e34071ae73c66cbaedd9974ef2207e0a03e0717dcb9e2269}{IO}},}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{_lexical_8h_ad870f3a2c3baacb65e34071ae73c66cbab21bb6164a68674f388520d4d59e4da1}{STATE}},}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{_lexical_8h_ad870f3a2c3baacb65e34071ae73c66cbae4f21099481eef801603441650cb6eff}{PROCESS}},}
+\DoxyCodeLine{00017\ \};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_token}{Token}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_token_a8f7f65b2666aff1b8c38a7b2bd215edf}{mark}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_token_a7bcbb026c06822694c80ec6c058dee10}{attribute}};\ \ \ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_token}{Token}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_token_a8f7f65b2666aff1b8c38a7b2bd215edf}{mark}}\ =\ -\/1,\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_token_a7bcbb026c06822694c80ec6c058dee10}{attribute}}\ =\ \textcolor{stringliteral}{"{}\ "{}});}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_token}{Token}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_token}{Token}}\&\ token);}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_token_a3d7d59eaac1535df1433357d5d372f84}{\string~Token}}();}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_token_a21a80c1848874891dc811137162f473f}{getMark}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_token_a6a1a2d15b150fd70c416f6315d816263}{getAttribute}}();}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_token_a1cc7449811a5e5d4d862cc3da0fd3556}{setMark}}(\textcolor{keywordtype}{int}\ i);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_token_a2af733ac7924a7501650333d4cf3fd6a}{setAttribute}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_token_a7bcbb026c06822694c80ec6c058dee10}{attribute}});}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_token_ac040efc508a520dc0d19046969ddf1d9}{output}}();}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_token_stream}{TokenStream}}\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_token_stream_a928729a0cbed1e04cef656a62612b0ec}{size}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_token_stream_a941ebbded0fb5d9113600a360cf81c42}{length}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_token}{Token}}*\ \mbox{\hyperlink{class_token_stream_a2579189b5811f685c8d4da872052c85a}{tokens}};\ \ \ \ \ \ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_token_stream}{TokenStream}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_token_stream_a928729a0cbed1e04cef656a62612b0ec}{size}}\ =\ 50);}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_token_stream}{TokenStream}}(\mbox{\hyperlink{class_token_stream}{TokenStream}}\&\ tokenStream);}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_token_stream_a16519782e35e74b26236c729c6b94f8c}{\string~TokenStream}}();}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_token_stream_ae691f5b1fc803b78ec994d3f1cde4fff}{getLength}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_token}{Token}}\ \mbox{\hyperlink{class_token_stream_aea84b2cdba7ea4c6dd0be941518da7fd}{getToken}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_token_stream_a3705714d52f2c1f0ea169cf7d9bcf11e}{append}}(\textcolor{keywordtype}{int}\ mark,\ \textcolor{keywordtype}{string}\ attribute);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_token_stream_a84c30c8c6a167ec101d18bfe967859fb}{output}}();}
+\DoxyCodeLine{00047\ \};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \mbox{\hyperlink{class_token_stream}{TokenStream}}*\ \mbox{\hyperlink{_lexical_8h_a76996d78776dec8a6f818e384b4589cc}{lexical}}(\textcolor{keywordtype}{string}\ rslPath);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00061\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_lexical_8h_a18409178c214ea8c056b129a75b36b9b}{isAlpha}}(\textcolor{keywordtype}{string}\ uncheck);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00068\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_lexical_8h_a6b300f5159ec9b52955a66836866469d}{isNumber}}(\textcolor{keywordtype}{string}\ uncheck);}
+
+\end{DoxyCode}

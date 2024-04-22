@@ -1,0 +1,54 @@
+\doxysection{Server/\+User\+Data.h 文件参考}
+\hypertarget{_user_data_8h}{}\label{_user_data_8h}\index{Server/UserData.h@{Server/UserData.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+\doxysubsubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_user_data}{User\+Data}}
+\begin{DoxyCompactList}\small\item\em 抽象用户数据的类\+User\+Data \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_user_data}{User\+Data}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_user_data_8h_a475466bd9ae9ae95ceee96454ca2a827}{init\+User\+Data}} (string username)
+\begin{DoxyCompactList}\small\item\em 初始化用户数据 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_user_data_8h_ab6b4b716ac2e0094d3134e9c2b0ea159}{get\+User\+Data}} (\mbox{\hyperlink{class_user_data}{User\+Data}} \texorpdfstring{$\ast$}{*}user)
+\begin{DoxyCompactList}\small\item\em 用户数据测试桩 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{函数说明}
+\Hypertarget{_user_data_8h_ab6b4b716ac2e0094d3134e9c2b0ea159}\label{_user_data_8h_ab6b4b716ac2e0094d3134e9c2b0ea159} 
+\index{UserData.h@{UserData.h}!getUserData@{getUserData}}
+\index{getUserData@{getUserData}!UserData.h@{UserData.h}}
+\doxysubsubsection{\texorpdfstring{getUserData()}{getUserData()}}
+{\footnotesize\ttfamily void get\+User\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_user_data}{User\+Data}} \texorpdfstring{$\ast$}{*}}]{user }\end{DoxyParamCaption})}
+
+
+
+用户数据测试桩 
+
+
+\begin{DoxyParams}{参数}
+{\em user} & 保存用户数据 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_user_data_8h_a475466bd9ae9ae95ceee96454ca2a827}\label{_user_data_8h_a475466bd9ae9ae95ceee96454ca2a827} 
+\index{UserData.h@{UserData.h}!initUserData@{initUserData}}
+\index{initUserData@{initUserData}!UserData.h@{UserData.h}}
+\doxysubsubsection{\texorpdfstring{initUserData()}{initUserData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_user_data}{User\+Data}} \texorpdfstring{$\ast$}{*} init\+User\+Data (\begin{DoxyParamCaption}\item[{string}]{username }\end{DoxyParamCaption})}
+
+
+
+初始化用户数据 
+
+
+\begin{DoxyParams}{参数}
+{\em username} & 保存用户名的字符串 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+返回初始化后的用户数据 
+\end{DoxyReturn}

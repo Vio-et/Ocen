@@ -1,0 +1,60 @@
+\doxysection{Robot/parser/\+Parser.h 文件参考}
+\hypertarget{_parser_8h}{}\label{_parser_8h}\index{Robot/parser/Parser.h@{Robot/parser/Parser.h}}
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include "{}../lex/\+Lexical.\+h"{}}\newline
+\doxysubsubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_state}{State}}
+\begin{DoxyCompactList}\small\item\em 抽象状态的类\+State \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_parser}{Parser}}
+\begin{DoxyCompactList}\small\item\em 抽象语法分析树的类\+Parser \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{类型定义}
+\begin{DoxyCompactItemize}
+\item 
+typedef string \mbox{\hyperlink{_parser_8h_a4aa1f2d082455c12292575aef594821d}{State\+Id}}
+\item 
+typedef string \mbox{\hyperlink{_parser_8h_a30229ccc46d415e9a0e1d30b400700c7}{Answer}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_parser}{Parser}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_parser_8h_ac6c5da63c098c33021607f871c489ebe}{parser}} (\mbox{\hyperlink{class_token_stream}{Token\+Stream}} \texorpdfstring{$\ast$}{*}tokens)
+\begin{DoxyCompactList}\small\item\em 语法分析函数，处理记号流并生成语法分析树 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{类型定义说明}
+\Hypertarget{_parser_8h_a30229ccc46d415e9a0e1d30b400700c7}\label{_parser_8h_a30229ccc46d415e9a0e1d30b400700c7} 
+\index{Parser.h@{Parser.h}!Answer@{Answer}}
+\index{Answer@{Answer}!Parser.h@{Parser.h}}
+\doxysubsubsection{\texorpdfstring{Answer}{Answer}}
+{\footnotesize\ttfamily typedef string \mbox{\hyperlink{_parser_8h_a30229ccc46d415e9a0e1d30b400700c7}{Answer}}}
+
+\Hypertarget{_parser_8h_a4aa1f2d082455c12292575aef594821d}\label{_parser_8h_a4aa1f2d082455c12292575aef594821d} 
+\index{Parser.h@{Parser.h}!StateId@{StateId}}
+\index{StateId@{StateId}!Parser.h@{Parser.h}}
+\doxysubsubsection{\texorpdfstring{StateId}{StateId}}
+{\footnotesize\ttfamily typedef string \mbox{\hyperlink{_parser_8h_a4aa1f2d082455c12292575aef594821d}{State\+Id}}}
+
+
+
+\doxysubsection{函数说明}
+\Hypertarget{_parser_8h_ac6c5da63c098c33021607f871c489ebe}\label{_parser_8h_ac6c5da63c098c33021607f871c489ebe} 
+\index{Parser.h@{Parser.h}!parser@{parser}}
+\index{parser@{parser}!Parser.h@{Parser.h}}
+\doxysubsubsection{\texorpdfstring{parser()}{parser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_parser}{Parser}} \texorpdfstring{$\ast$}{*} parser (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_token_stream}{Token\+Stream}} \texorpdfstring{$\ast$}{*}}]{tokens }\end{DoxyParamCaption})}
+
+
+
+语法分析函数，处理记号流并生成语法分析树 
+
+
+\begin{DoxyParams}{参数}
+{\em tokens} & 待处理的记号流 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+报错记号流对应的语法分析树 
+\end{DoxyReturn}
